@@ -7,6 +7,9 @@ form.addEventListener("submit", (e) => {
     XHR.open("POST", "/posts", true);
     XHR.responseType = "json";
     XHR.send(formData);
+    XHR.onload = () => {
+      console.log(XHR.response);
+    };
   });
  };
 
